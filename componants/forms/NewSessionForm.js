@@ -1,5 +1,7 @@
 import { useState } from "react"
-import LandingButton from "../buttons/LandingButton"
+import FrontButton from "../buttons/FrontButton"
+
+
 
 export default function NewSessionForm(){
 
@@ -14,9 +16,9 @@ export default function NewSessionForm(){
                         setUserName(e.target.value)
                     }}  />
                 </div>
-                <LandingButton type="submit">
+                <FrontButton type="submit">
                     Submit
-                </LandingButton>
+                </FrontButton>
                 
             </form>
         </div>

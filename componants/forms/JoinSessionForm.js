@@ -1,14 +1,19 @@
 import { useState } from "react"
-import LandingButton from "../buttons/LandingButton"
+import FrontButton from "../buttons/FrontButton"
 
 export default function JoinSessionForm(){
+
+    const handleJoinForm = () =>{
+        
+    }
+
 
     const [sessionID,setSessionID] = useState("")
     const [userName,setUserName] = useState("")
 
     return(
         <div>
-            <form onSubmit={handleForm}>
+            <form onSubmit={handleJoinForm}>
             <div>
                     <label>Username:</label>
                     <input type="text" value={userName} onChange={(e) =>{
@@ -21,9 +26,9 @@ export default function JoinSessionForm(){
                         setSessionID(e.target.value)
                     }}  />
                 </div>
-                <LandingButton type="submit">
+                <FrontButton type="submit">
                     Submit
-                </LandingButton>
+                </FrontButton>
                 <span className="hidden text-red-500 font-semibold">Username or Session ID incorrect</span>
                 <p>Note: Data will not persist</p>
                 
