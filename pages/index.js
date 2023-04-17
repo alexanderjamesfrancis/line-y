@@ -20,8 +20,8 @@ export default function Home() {
     <div className="flex flex-col items-center bg-blue-300 h-screen ">
       <div className="mt-20">
         <Title />
-        <FrontButton onClick={test} value="NewSession" >New Session</FrontButton>
-        <FrontButton onClick={test} value="JoinSession">Join Session</FrontButton>
+        <FrontButton onClick={handleClick} value="NewSession" >New Session</FrontButton>
+        <FrontButton onClick={handleClick} value="JoinSession">Join Session</FrontButton>
         <SessionForm display ={sessionDisplay} />
       </div>
      

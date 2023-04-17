@@ -3,18 +3,23 @@ import FrontButton from "../buttons/FrontButton"
 
 export default function JoinSessionForm(){
 
-    const handleJoinForm = () =>{
-        
-    }
+   
 
 
     const [sessionID,setSessionID] = useState("")
     const [userName,setUserName] = useState("")
 
+    const handleJoinForm = (e) =>{
+        e.preventDefault()
+        console.log({userName})
+        console.log({sessionID})
+        console.log("This is the Join form being submitted")
+    }
+
     return(
         <div>
             <form onSubmit={handleJoinForm}>
-            <div>
+            <div className="space-2">
                     <label>Username:</label>
                     <input type="text" value={userName} onChange={(e) =>{
                         setUserName(e.target.value)
