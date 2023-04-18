@@ -1,6 +1,6 @@
 import { useState } from "react"
 import FrontButton from "../buttons/FrontButton"
-
+import Input from "../inputs/Input"
 
 
 export default function NewSessionForm(){
@@ -16,16 +16,16 @@ export default function NewSessionForm(){
 
     return(
         <div>
-            <form onSubmit={handleNewForm}>
-                <div>
-                    <label>Username Name:</label>
-                    <input type="text" value={userName} onChange={(e) =>{
+            <form className="flex flex-col items-center" onSubmit={handleNewForm}>
+                <div className="flex flex-col items-center">
+                    <label>Username</label>
+                    <Input type="text" value={userName} onChange={(e) =>{
                         setUserName(e.target.value)
                     }}  />
                 </div>
-                <div>
+                <div className="flex flex-col items-center">
                     <label>Line Name:</label>
-                    <input type="text" value={lineName} onChange={(e) =>{
+                    <Input type="text" value={lineName} onChange={(e) =>{
                         setLineName(e.target.value)
                     }}  />
                 </div>

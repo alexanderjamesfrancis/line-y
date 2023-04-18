@@ -1,5 +1,6 @@
 import { useState } from "react"
 import FrontButton from "../buttons/FrontButton"
+import Input from "../inputs/Input"
 
 export default function JoinSessionForm(){
 
@@ -18,16 +19,16 @@ export default function JoinSessionForm(){
 
     return(
         <div>
-            <form onSubmit={handleJoinForm}>
-            <div className="space-2">
+            <form className="flex flex-col items-center" onSubmit={handleJoinForm}>
+            <div className="flex flex-col items-center">
                     <label>Username:</label>
-                    <input type="text" value={userName} onChange={(e) =>{
+                    <Input type="text" value={userName} onChange={(e) =>{
                         setUserName(e.target.value)
                     }}  />
                 </div>
-                <div>
+                <div className="flex flex-col items-center">
                     <label>Session ID:</label>
-                    <input type="text" value={sessionID} onChange={(e) =>{
+                    <Input type="text" value={sessionID} onChange={(e) =>{
                         setSessionID(e.target.value)
                     }}  />
                 </div>
