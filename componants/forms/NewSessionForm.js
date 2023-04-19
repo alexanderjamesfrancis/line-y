@@ -12,6 +12,7 @@ export default function NewSessionForm(){
         e.preventDefault()
         console.log({userName})
         console.log("This is the new form being submitted")
+        
     }
 
     return(
