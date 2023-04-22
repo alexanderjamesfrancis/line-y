@@ -1,8 +1,11 @@
+import randomPassword from "@/functions/randomPassword"
+
 export default async function requestHandler(req, res, form) {
     if(req.method === 'POST'){
         if ("New Session") {
             // Await
             // Generate random string for the ID - about 6 digits - mix of letter and numbers
+            const newPassword = randomPassword()
             // Create entry into database using the above ID
             // Vague Scheema: id: {
             //     sessionUsers: [
