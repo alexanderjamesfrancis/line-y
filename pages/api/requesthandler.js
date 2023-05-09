@@ -1,6 +1,9 @@
 import randomPassword from "@/functions/randomPassword"
+import { data } from "autoprefixer"
 
 export default async function requestHandler(req, res, form) {
+
+    let sessionList
     if(req.method === 'POST'){
         if ("New Session") {
             // Await
@@ -18,18 +21,22 @@ export default async function requestHandler(req, res, form) {
             // Populate list with single user
             // Send user to live with the list
             // Return List
+            return sessionList
             
         } else if ("Join Session"){
             // Await
+            
             // find session using ID
             // Add user data to document
             // Ping the rest of users to update their lists
             // Send user to live with list
+            
             // Return list?
+            return sessionList
 
         } else {
             console.log("This has failed at new or joins session")
         }
     }
-    res.status(200).json({ name: 'John Doe' })
+    res.status(200).json({data: sessionList})
   }
