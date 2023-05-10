@@ -13,7 +13,7 @@ export default function session(userlist){
                 <div>
                     <div>
                         {userlist.map(postion =>{
-                            <UserPostion(postion) />
+                            <UserPostion user={postion} />
                         }
 
                         )}
