@@ -1,6 +1,6 @@
 
 import { MongoClient, ServerApiVersion } from 'mongodb'
-const uri = "mongodb+srv://alexanderjamesfrancis:<password>@cluster0.hubt4bb.mongodb.net/?retryWrites=true&w=majority";
+const uri = process.env.CONNECTIONPW;
 
 
 
@@ -26,3 +26,5 @@ async function run() {
   }
 }
 run().catch(console.dir);
+
+export default mongoConnection

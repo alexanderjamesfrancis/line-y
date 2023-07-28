@@ -1,6 +1,7 @@
 import { useState } from "react"
 import FrontButton from "../buttons/FrontButton"
 import Input from "../inputs/Input"
+import createNewSession from "@/pages/api/db/createNewSession"
 
 
 export default function NewSessionForm(){
@@ -10,8 +11,13 @@ export default function NewSessionForm(){
 
     const handleNewForm = (e) =>{
         e.preventDefault()
-        console.log({userName})
-        console.log("This is the new form being submitted")
+        newSession = {
+            userName,
+            lineName
+        }
+        createNewSession(newSession)
+        
+        
         
     }
 

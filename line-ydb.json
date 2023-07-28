@@ -1,0 +1,22 @@
+{
+  "sessions": [
+    {
+      "id": "645a330a3a1eff42413d2211",
+      "passcode": 1234,
+      "users": [
+        { "name": "alex", "status": "live" },
+        { "name": "james", "status": "live" },
+        { "name": "Dan", "status": "live" }
+      ]
+    },
+    {
+      "id": "645b83858130d2962dcbe555",
+      "passcode": 5678,
+      "users": [
+        { "name": "bob", "status": "live" },
+        { "name": "ben", "status": "live" },
+        { "name": "Bill", "status": "live" }
+      ]
+    }
+  ]
+}
