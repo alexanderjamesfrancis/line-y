@@ -2,7 +2,6 @@ import FrontButton from "@/componants/buttons/FrontButton"
 import Title from "@/componants/constants/Title"
 import SessionForm from "@/componants/forms/SessionForm"
 import { useState, useEffect } from "react"
-import mongoConnection from "./api/db/connection"
 
 
 export default function Home() {

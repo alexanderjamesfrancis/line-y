@@ -1,6 +1,8 @@
 import { useState } from "react";
 import FrontButton from "../buttons/FrontButton";
 import Input from "../inputs/Input";
+import { cookies } from "next/dist/client/components/headers";
+import joinSession from "@/pages/api/db/joinActiveSession";
 
 export default function JoinSessionForm() {
   const [sessionID, setSessionID] = useState("");
@@ -10,7 +12,12 @@ export default function JoinSessionForm() {
     e.preventDefault();
     console.log({ userName });
     console.log({ sessionID });
-    console.log("This is the Join form being submitted");
+    const cookieStore = cookies().set({
+      userName,
+      sessionID
+    })
+    // console.log("This is the Join form being submitted");
+    joinSession(userName,sessionID)
   };
 
   return (

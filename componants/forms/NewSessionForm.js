@@ -1,7 +1,7 @@
 import { useState } from "react"
 import FrontButton from "../buttons/FrontButton"
 import Input from "../inputs/Input"
-import createNewSession from "@/pages/api/db/createNewSession"
+// import createNewSession from "@/pages/api/db/createNewSession"
 
 
 export default function NewSessionForm(){
